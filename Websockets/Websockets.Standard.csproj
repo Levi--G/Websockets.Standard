@@ -5,13 +5,16 @@
     <Authors>Levi Gillis</Authors>
     <Company></Company>
     <Product />
-    <Description>Cross-Platform websockets</Description>
+    <Description>A .Net Standard class library that wraps around different WebSocket implementations.</Description>
     <Copyright>Levi Gillis @ 2018</Copyright>
-    <PackageReleaseNotes>Initial port from Websockets.PCL</PackageReleaseNotes>
+    <PackageReleaseNotes>Initial port to .NET Standard with a few fixes and changes.</PackageReleaseNotes>
     <NeutralLanguage>en</NeutralLanguage>
     <RepositoryType>Git</RepositoryType>
     <PackageTags>Websockets, Net45, Android, Ios, Universal, Mono</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Levi--G/Websockets.Standard</PackageProjectUrl>
+    <PackageIconUrl>https://materialdesignicons.com/icon/video-input-svideo</PackageIconUrl>
+    <RepositoryUrl>https://github.com/Levi--G/Websockets.Standard.git</RepositoryUrl>
   </PropertyGroup>
 
 </Project>

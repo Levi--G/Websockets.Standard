@@ -7,8 +7,8 @@
     <ProjectGuid>{FBDCFF5A-A517-4E40-B430-B9D3C929940B}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Websockets.UniversalWindows</RootNamespace>
-    <AssemblyName>Websockets.UniversalWindows</AssemblyName>
+    <RootNamespace>Websockets.Universal</RootNamespace>
+    <AssemblyName>Websockets.Universal</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion Condition=" '$(TargetPlatformVersion)' == '' ">10.0.10586.0</TargetPlatformVersion>

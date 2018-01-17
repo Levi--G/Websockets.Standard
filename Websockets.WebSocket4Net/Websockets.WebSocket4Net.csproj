@@ -2,6 +2,20 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard1.3</TargetFramework>
+    <Authors>Levi Gillis</Authors>
+    <Company>Levi Gillis</Company>
+    <Product>Websockets.NetStandard</Product>
+    <Description>WebSocket4Net implementation of Websockets.Standard.</Description>
+    <PackageReleaseNotes>Initial port to .NET Standard with a few fixes and changes.</PackageReleaseNotes>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <PackageProjectUrl>https://github.com/Levi--G/Websockets.Standard</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Levi--G/Websockets.Standard.git</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>Websockets, WebSocket4Net</PackageTags>
+    <NeutralLanguage>en-150</NeutralLanguage>
+    <PackageIconUrl>https://materialdesignicons.com/icon/video-input-svideo</PackageIconUrl>
+    <Copyright>Levi Gillis @ 2018</Copyright>
   </PropertyGroup>
 
   <ItemGroup>
