@@ -1,0 +1,17 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.3</TargetFramework>
+    <Authors>Levi Gillis</Authors>
+    <Company></Company>
+    <Product />
+    <Description>Cross-Platform websockets</Description>
+    <Copyright>Levi Gillis @ 2018</Copyright>
+    <PackageReleaseNotes>Initial port from Websockets.PCL</PackageReleaseNotes>
+    <NeutralLanguage>en</NeutralLanguage>
+    <RepositoryType>Git</RepositoryType>
+    <PackageTags>Websockets, Net45, Android, Ios, Universal, Mono</PackageTags>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+</Project>
