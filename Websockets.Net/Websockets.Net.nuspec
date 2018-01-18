@@ -7,11 +7,14 @@
     <authors>Levi Gillis</authors>
     <owners>Levi Gillis</owners>
     <projectUrl>https://github.com/Levi--G/Websockets.Standard</projectUrl>
-    <iconUrl>https://materialdesignicons.com/icon/video-input-svideo</iconUrl>
+    <iconUrl>http://animedev.azurewebsites.net/Nuget/Websocket.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>.NET framework implementation of Websockets.Standard, wraps default implementation.</description>
     <releaseNotes>Initial port to .NET Standard with a few fixes and changes.</releaseNotes>
     <copyright>Copyright 2018 Levi Gillis</copyright>
     <tags>Websockets, Net45</tags>
+    <dependencies>
+      <dependency id="Websockets.Standard" version="1.0.0" />
+    </dependencies>
   </metadata>
 </package>

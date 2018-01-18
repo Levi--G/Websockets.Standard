@@ -13,7 +13,7 @@
     <PackageTags>Websockets, Net45, Android, Ios, Universal, Mono</PackageTags>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageProjectUrl>https://github.com/Levi--G/Websockets.Standard</PackageProjectUrl>
-    <PackageIconUrl>https://materialdesignicons.com/icon/video-input-svideo</PackageIconUrl>
+    <PackageIconUrl>http://animedev.azurewebsites.net/Nuget/Websocket.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/Levi--G/Websockets.Standard.git</RepositoryUrl>
   </PropertyGroup>
 

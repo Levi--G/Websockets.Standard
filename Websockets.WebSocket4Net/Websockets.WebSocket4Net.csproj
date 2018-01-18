@@ -14,7 +14,7 @@
     <RepositoryType>git</RepositoryType>
     <PackageTags>Websockets, WebSocket4Net</PackageTags>
     <NeutralLanguage>en-150</NeutralLanguage>
-    <PackageIconUrl>https://materialdesignicons.com/icon/video-input-svideo</PackageIconUrl>
+    <PackageIconUrl>http://animedev.azurewebsites.net/Nuget/Websocket.png</PackageIconUrl>
     <Copyright>Levi Gillis @ 2018</Copyright>
   </PropertyGroup>
 
