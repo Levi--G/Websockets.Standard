@@ -15,6 +15,9 @@
     <PackageProjectUrl>https://github.com/Levi--G/Websockets.Standard</PackageProjectUrl>
     <PackageIconUrl>http://animedev.azurewebsites.net/Nuget/Websocket.png</PackageIconUrl>
     <RepositoryUrl>https://github.com/Levi--G/Websockets.Standard.git</RepositoryUrl>
+    <AssemblyVersion>1.0.1.0</AssemblyVersion>
+    <FileVersion>1.0.1.0</FileVersion>
+    <Version>1.0.1</Version>
   </PropertyGroup>
 
 </Project>
