@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Websockets.SharedTest;
 
 namespace Websockets.NetTests
 {
@@ -10,18 +11,15 @@ namespace Websockets.NetTests
     {
         static void Main(string[] args)
         {
-            var test = new TestsSample();
-            test.Setup();
+            // 1) Link in your main activity
+            Websockets.Net.WebsocketConnection.Link();
+
+            Console.WriteLine("Press ENTER to stop");
+
+            var test = new Test();
             test.DoTest();
 
-            Console.WriteLine("Press ESC to stop");
-            do
-            {
-                while (!Console.KeyAvailable)
-                {
-                    // Do something
-                }
-            } while (Console.ReadKey(true).Key != ConsoleKey.Escape);
+            Console.ReadLine();
         }
     }
 }

@@ -2,21 +2,13 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 
-
-namespace Websockets.NetTests
+namespace Websockets.SharedTest
 {
-    public class TestsSample
+    public class Test
     {
         private Websockets.IWebSocketConnection connection;
         private bool Failed;
         private bool Echo;
-        
-        public void Setup()
-        {
-            // 1) Link in your main activity
-            Websockets.Net.WebsocketConnection.Link();
-        }
-
         
         public async void DoTest()
         {
@@ -47,7 +39,7 @@ namespace Websockets.NetTests
                 return;
             Console.WriteLine("Connected !");
 
-            System.Diagnostics.Trace.WriteLine("HI");
+            Trace.WriteLine("HI");
             Console.WriteLine("Sending...");
             connection.Send("Hello World");
             Console.WriteLine("Sent !");
