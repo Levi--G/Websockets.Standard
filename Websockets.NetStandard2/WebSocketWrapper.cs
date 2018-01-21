@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Websockets.Net
+namespace Websockets.NetStandard2
 {
     internal class WebSocketWrapper : IDisposable
     {

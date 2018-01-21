@@ -1,7 +1,7 @@
 using System;
 using System.Collections.Generic;
 
-namespace Websockets.Net
+namespace Websockets.NetStandard
 {
     /// <summary>
     /// A Websocket connection for 'full' .Net Core applications

@@ -2,8 +2,9 @@ using System;
 using SuperSocket.ClientEngine;
 using WebSocket4Net;
 using System.Collections.Generic;
+using System.Linq;
 
-namespace Websockets.WP8
+namespace Websockets.WebSocket4Net
 {
     /// <summary>
     /// A Websocket connection 
