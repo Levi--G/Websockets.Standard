@@ -17,9 +17,12 @@ namespace Websockets.NetTests
             Console.WriteLine("Press ENTER to stop");
 
             var test = new Test();
-            test.DoTest();
+            test.OnOutput += (s, data) => { Console.WriteLine(data); };
+            test.DoTest(true);
 
             Console.ReadLine();
+
+            test.EndTest();
         }
     }
 }

@@ -4,13 +4,19 @@ using System.Threading.Tasks;
 
 namespace Websockets.SharedTest
 {
-    public class Test
+    public class Test : IDisposable
     {
         private Websockets.IWebSocketConnection connection;
         private bool Failed;
         private bool Echo;
-        
-        public async void DoTest()
+        public event EventHandler<string> OnOutput;
+
+        void WriteLine(string line)
+        {
+            OnOutput?.Invoke(this, line);
+        }
+
+        public async void DoTest(bool withHeaders)
         {
             // 2) Call factory from your PCL code.
             // This is the same as new   Websockets.Droid.WebsocketConnectionDroid();
@@ -27,8 +33,15 @@ namespace Websockets.SharedTest
 
             //Do test
 
-            Console.WriteLine("Connecting...");
-            connection.Open("http://echo.websocket.org");
+            WriteLine("Connecting...");
+            if (withHeaders)
+            {
+                connection.Open("http://echo.websocket.org", null, new System.Collections.Generic.Dictionary<string, string> { { "Origin", "websocket.org" } });
+            }
+            else
+            {
+                connection.Open("http://echo.websocket.org");
+            }
 
             while (!connection.IsOpen && !Failed)
             {
@@ -37,12 +50,12 @@ namespace Websockets.SharedTest
 
             if (!connection.IsOpen)
                 return;
-            Console.WriteLine("Connected !");
+            WriteLine("Connected !");
 
-            Trace.WriteLine("HI");
-            Console.WriteLine("Sending...");
+            //Trace.WriteLine("HI");
+            WriteLine("Sending...");
             connection.Send("Hello World");
-            Console.WriteLine("Sent !");
+            WriteLine("Sent !");
 
             while (!Echo && !Failed)
             {
@@ -52,21 +65,28 @@ namespace Websockets.SharedTest
             if (!Echo)
                 return;
 
-            Console.WriteLine("Received !");
+            WriteLine("Received !");
 
-            Console.WriteLine("Passed !");
+            WriteLine("Passed !");
+        }
+
+        public void EndTest()
+        {
+            connection?.Close();
+            connection?.Dispose();
+            connection = null;
         }
 
         private void Connection_OnOpened()
         {
-            Debug.WriteLine("Opened !");
+            WriteLine("Opened !");
         }
 
         async void Timeout()
         {
             await Task.Delay(120000);
             Failed = true;
-            Debug.WriteLine("Timeout");
+            WriteLine("Timeout");
         }
 
         private void Connection_OnMessage(string obj)
@@ -76,13 +96,18 @@ namespace Websockets.SharedTest
 
         private void Connection_OnError(string obj)
         {
-            Trace.Write("ERROR " + obj);
+            WriteLine("ERROR " + obj);
             Failed = true;
         }
 
         private void Connection_OnLog(string obj)
         {
-            Trace.Write(obj);
+            WriteLine(obj);
+        }
+
+        public void Dispose()
+        {
+            EndTest();
         }
     }
 }
