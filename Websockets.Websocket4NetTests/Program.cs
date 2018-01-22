@@ -8,13 +8,13 @@ namespace Websockets.Websocket4NetTests
         static void Main(string[] args)
         {
             // 1) Link in your main activity
-            Websockets.WP8.WebsocketConnection.Link();
+            Websockets.WebSocket4Net.WebsocketConnection.Link();
 
             Console.WriteLine("Press ENTER to stop");
 
             var test = new Test();
             test.OnOutput += (s, data) => { Console.WriteLine(data); };
-            test.DoTest(false);
+            test.DoTest(true);
 
             Console.ReadLine();
 

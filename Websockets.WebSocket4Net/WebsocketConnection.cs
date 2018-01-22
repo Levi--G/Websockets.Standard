@@ -50,16 +50,7 @@ namespace Websockets.WebSocket4Net
             else if (url.StartsWith("http"))
                 url = url.Replace("http://", "ws://");
 
-            if (headers != null && headers.Count > 0)
-            {
-                throw new NotImplementedException();
-                //foreach (var entry in headers)
-                //{
-                //    _websocket.SetRequestHeader(entry.Key, entry.Value);
-                //}
-            }
-
-            websocket = new WebSocket(url, protocol);
+            websocket = new WebSocket(url, protocol, null, headers?.ToList());
             websocket.Opened += Websocket_Opened;
             websocket.Error += Websocket_Error;
             websocket.Closed += Websocket_Closed;
