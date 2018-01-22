@@ -23,6 +23,7 @@ Feel free to make an issue/pull request to support more library's/platforms
 - [Websockets.Standard](https://www.nuget.org/packages/Websockets.Standard/) (include in your library/common app)
 - [.NET Framework](https://www.nuget.org/packages/Websockets.Net/) (.Net 4.5.2+)
 - [.NET Standard](https://www.nuget.org/packages/Websockets.NetStandard/) (.Net Standard 1.3 - 1.6)
+- [.NET Standard2](https://www.nuget.org/packages/Websockets.NetStandard2/) (.Net Standard 2.0+)
 - [Universal](https://www.nuget.org/packages/Websockets.Universal/) (UWP apps win 10+)
 - [WebSocket4Net](https://www.nuget.org/packages/Websockets.WebSocket4Net/) (.Net Standard 1.3+, soon other platforms too)
 
@@ -95,7 +96,6 @@ There are a few 'test' examples (projects with the Tests suffix). Take a look th
 
 ### TODO
 
-- Make the actual NuGet Packages
 - Support .NET 2.0 and other old frameworks
 - Support Native Android (port from old project)
 - Support Ios SocketRocket (port from old project)
