@@ -20,6 +20,7 @@ namespace Websockets.NetStandard
         /// <summary>
         /// Factory Initializer
         /// </summary>
+        [Obsolete("This package has been merged in Websocket.Net version 1.0.1 and onwards")]
         public static void Link()
         {
             WebSocketFactory.Init(() => new WebsocketConnection());

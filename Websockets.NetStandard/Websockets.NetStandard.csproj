@@ -5,10 +5,11 @@
     <Authors>Levi Gillis</Authors>
     <Company>Levi Gillis</Company>
     <Product>Websockets.NetStandard</Product>
-    <Description>.NET standard (1.3 - 1.6) implementation of Websockets.Standard, wraps default implementation.</Description>
-    <PackageReleaseNotes>Initial port to .NET Standard with a few fixes and changes.</PackageReleaseNotes>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <Description>Obsolete: Package merged into Websockets.Net 1.0.1
+.NET standard (1.3 - 1.6) implementation of Websockets.Standard, wraps default implementation.</Description>
+    <PackageReleaseNotes>Package merged into Websockets.Net 1.0.1</PackageReleaseNotes>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <PackageProjectUrl>https://github.com/Levi--G/Websockets.Standard</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Levi--G/Websockets.Standard.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -16,7 +17,7 @@
     <NeutralLanguage>en-150</NeutralLanguage>
     <PackageIconUrl>http://animedev.azurewebsites.net/Nuget/Websocket.png</PackageIconUrl>
     <Copyright>Levi Gillis @ 2018</Copyright>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
   </PropertyGroup>
 
   <ItemGroup>

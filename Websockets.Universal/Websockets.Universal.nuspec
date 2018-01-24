@@ -9,8 +9,9 @@
     <projectUrl>https://github.com/Levi--G/Websockets.Standard</projectUrl>
     <iconUrl>http://animedev.azurewebsites.net/Nuget/Websocket.png</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>.NET Universal (Core 5.0, Win 10+) implementation of Websockets.Standard, wraps default implementation.</description>
-    <releaseNotes>Initial port to .NET Standard with a few fixes and changes.</releaseNotes>
+    <description>Obsolete: Package merged into Websockets.Net 1.0.1
+.NET Universal (Core 5.0, Win 10+) implementation of Websockets.Standard, wraps default implementation.</description>
+    <releaseNotes>Package merged into Websockets.Net 1.0.1</releaseNotes>
     <copyright>Copyright 2018 Levi Gillis</copyright>
     <tags>Websockets, Universal</tags>
     <dependencies>

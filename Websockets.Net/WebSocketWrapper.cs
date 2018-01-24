@@ -22,8 +22,6 @@ namespace Websockets.Net
         private readonly CancellationToken _cancellationToken;
         private AsyncLock _asyncLock = new AsyncLock();
 
-        public bool IsDisposed { get; set; }
-
         public WebSocketWrapper()
         {
             _ws = new ClientWebSocket();

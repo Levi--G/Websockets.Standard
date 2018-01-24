@@ -17,10 +17,12 @@ namespace Websockets.Net
         public event Action<string> OnMessage = delegate { };
         public event Action<string> OnLog = delegate { };
 
+#if !netstandard13
         static WebsocketConnection()
         {
             System.Net.ServicePointManager.ServerCertificateValidationCallback += (o, certificate, chain, errors) => true;
         }
+#endif
 
         /// <summary>
         /// Factory Initializer
@@ -34,7 +36,12 @@ namespace Websockets.Net
 
         public void Open(string url, string protocol = null, string authToken = null)
         {
+
+#if netstandard13
+            var headers = new Dictionary<string, string>(StringComparer.OrdinalIgnoreCase);
+#else
             var headers = new Dictionary<string, string>(StringComparer.InvariantCultureIgnoreCase);
+#endif
             if (authToken != null)
             {
                 headers.Add("Authorization", authToken);
@@ -60,7 +67,7 @@ namespace Websockets.Net
                     url = url.Replace("https://", "wss://");
                 else if (url.StartsWith("http"))
                     url = url.Replace("http://", "ws://");
-                
+
                 await _websocket.Connect(url, protocol, headers);
 
             }
