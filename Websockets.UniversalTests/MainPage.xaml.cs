@@ -29,7 +29,7 @@ namespace Websockets.UniversalTests
         {
             this.InitializeComponent();
 
-            Websockets.Universal.WebsocketConnection.Link();
+            Websockets.Net.WebsocketConnection.Link();
 
             sample = new Test();
             sample.OnOutput += Sample_OnOutput;
