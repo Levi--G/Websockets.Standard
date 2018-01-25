@@ -1,14 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netstandard1.3</TargetFramework>
+    <TargetFrameworks>netstandard1.3;net20;net35;net40;net45</TargetFrameworks>
     <Authors>Levi Gillis</Authors>
     <Company>Levi Gillis</Company>
     <Product>Websockets.NetStandard</Product>
     <Description>WebSocket4Net implementation of Websockets.Standard.</Description>
-    <PackageReleaseNotes>Initial port to .NET Standard with a few fixes and changes.</PackageReleaseNotes>
-    <AssemblyVersion>1.0.2.0</AssemblyVersion>
-    <FileVersion>1.0.2.0</FileVersion>
+    <PackageReleaseNotes>Added more supported platforms for WebSocket4Net</PackageReleaseNotes>
+    <AssemblyVersion>1.0.3.0</AssemblyVersion>
+    <FileVersion>1.0.3.0</FileVersion>
     <PackageProjectUrl>https://github.com/Levi--G/Websockets.Standard</PackageProjectUrl>
     <RepositoryUrl>https://github.com/Levi--G/Websockets.Standard.git</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
@@ -16,13 +16,21 @@
     <NeutralLanguage>en-150</NeutralLanguage>
     <PackageIconUrl>http://animedev.azurewebsites.net/Nuget/Websocket.png</PackageIconUrl>
     <Copyright>Levi Gillis @ 2018</Copyright>
-    <Version>1.0.2</Version>
+    <Version>1.0.3</Version>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(TargetFramework) == 'net20'">
+    <DefineConstants>net20</DefineConstants>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="$(TargetFramework) == 'net35'">
+    <DefineConstants>net35</DefineConstants>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="WebSocket4Net" Version="0.15.1" />
-    <PackageReference Include="Websockets.Standard" Version="1.0.0" />
+    <PackageReference Include="Websockets.Standard" Version="1.0.2" />
   </ItemGroup>
 
 </Project>

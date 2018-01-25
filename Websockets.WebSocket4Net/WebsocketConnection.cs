@@ -19,7 +19,7 @@ namespace Websockets.WebSocket4Net
         public event Action<string> OnError = delegate { };
         public event Action<string> OnMessage = delegate { };
         public event Action<string> OnLog = delegate { };
-        
+
         /// <summary>
         /// Factory Initializer
         /// </summary>
@@ -49,15 +49,23 @@ namespace Websockets.WebSocket4Net
                 url = url.Replace("https://", "wss://");
             else if (url.StartsWith("http"))
                 url = url.Replace("http://", "ws://");
-
+#if net20 || net35
+            var customHeaderItems = new List<KeyValuePair<string, string>>();
+            if (headers != null)
+            {
+                customHeaderItems.AddRange(headers.ToArray());
+            }
+            websocket = new WebSocket(url, protocol, null, customHeaderItems, "Websockets.Standard", WebSocketVersion.Rfc6455);
+#else
             websocket = new WebSocket(url, protocol, null, headers?.ToList());
+#endif
             websocket.Opened += Websocket_Opened;
             websocket.Error += Websocket_Error;
             websocket.Closed += Websocket_Closed;
             websocket.MessageReceived += Websocket_MessageReceived;
             websocket.Open();
         }
-        
+
         public void Send(string message)
         {
             websocket.Send(message);
